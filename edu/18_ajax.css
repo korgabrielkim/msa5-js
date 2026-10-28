@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*          border-box : 보더를 기준으로함. 여백 포함(content 사이즈가 변함)
+              content-box : 컨텐트를 기준으로함. 여백 미포함(content 사이즈가 변하지 않음 -> 내가 지정한 영역 값을 content가 다 먹음.) */
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+form {
+  margin: 20px auto 0;
+  /* margin 값 : 12시부터 시계방향 */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card-container {
+  display: grid;
+  /* grid는 왼쪽 상단이 기준임. */
+  /* grid-template-columns: 1fr 1fr 1fr; : 1:1:1 비율로 컬럼이 만들어짐  */
+  /* grid-template-columns: 1fr 1fr; : 1:1 비율로 컬럼이 만들어짐  */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /*                                      minmax(최소값, 최대값) */
+  /*                     repeat(3, 1fr) : 1:1:1 배율로 3개를 배치하라는 의미
+                         auto-fit : 부모의 width를 모두 사용함(비어 있는 셀 부존재)
+                         auto-fill : 내가 지정해준 item의 최소 크기만큼 사용만 사용함(비어 있는 셀 존재)   */
+  gap: 10px;
+}
+
+.card {
+  background-color: #ff8e8eaf;
+  border-radius: 2px;
+  padding: 5px;
+  gap: 10px;
+}
+
+.card-img {
+  background-image: url("../edu/img/김햄찌-01.jpg");
+  padding-top: 80%;
+  /* 이렇게 하면 이미지 사이즈를 화면에 맞춰 자동으로 조정이 가능함 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}

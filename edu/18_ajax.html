@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajax 연습</title>
+    <link rel="stylesheet" href="../edu/18_ajax.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.20.0/dist/axios.min.js">
+      // <major. miner. patch> : <>는 제거해줘야함. major 버전이 틀리면 작동 X / miner 버전은 major 버전이 맞다면 작동될 가능성 높음 / patch는 보안 관련 부분 수정에 관한 것임
+    </script>
+    <script src="../edu/18_ajax.js" defer></script>
+  </head>
+  <body>
+    <!-- <form action=""></form> : 시멘틱 태그의 역할 O -->
+    <!-- <header></header> : 시멘틱 태그의 역할 O -->
+    <!-- <div></div> : 단지 영역을 만들기 위한 태그 / 복잡한 사이트는 시멘틱 태그를 사용하지 않는 경우가 많음(규칙성 때문에) -->
+    <div class="container">
+      <form>
+        <!-- form 속성 값
+             action : 서버와 연결하는 역할
+             method : 값이 무엇인가에 따라 요청하는 값이 달라짐 / 요즘은 html method를 잘 사용 X(ajax로 처리를 많이함) /
+                    get : 조회
+                    post : 데이터 저장(너에게 없는 데이터를 저장해줘)
+                    delete : 삭제
+                    patch : 업데이트(복수의 자료를 수정해줘)
+                    put : 업데이트(단일의 자료를 수정해줘)
+            ※ 이제 폼태그는 입력하는 값이 있는 공간 정도임. -->
+        <input
+          type="number"
+          name="page"
+          id="page"
+          placeholder="페이지"
+          required
+        />
+        <input
+          type="number"
+          name="limit"
+          id="limit"
+          placeholder="출력 갯수"
+          required
+        />
+        <!-- 타입에 넘버를 해두면 문자 입력을 기본적으로 막아주는 기능이 있음
+             required : 필수 항목으로 지정 ※ 비슷한 속성으로 max, min, minlengh 등이 있음.
+             id = html의 요소에 고유의 이름을 부여하는 것(절대 중복X) So, 우선도가 높음. 실무에서는 잘 사용X(CSS 작업시 웬만하면 Class 레벨에서 끝내야함.)
+             name = 서버가 사용(대부분 id랑 동일하게 지정해줌) -->
+        <button type="submit">전송</button>
+      </form>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">1: 아아아아</p>
+          <!-- textarea : 아주 아주 긴 글
+               p : 일반적인 글
+               span : 아주 특정 일부분에 대한 스타일을 주고 싶을 때 사용 -->
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">2: 가가가가</p>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">2: 가가가가</p>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <p class="card-txt">2: 가가가가</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
