@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ajax 연습</title>
     <link rel="stylesheet" href="../edu/18_ajax.css" />
+    <!-- axios 연결 : 자체 JavaScript 보다 상단에 연결해야함.-->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.20.0/dist/axios.min.js">
       // <major. miner. patch> : <>는 제거해줘야함. major 버전이 틀리면 작동 X / miner 버전은 major 버전이 맞다면 작동될 가능성 높음 / patch는 보안 관련 부분 수정에 관한 것임
     </script>
@@ -45,27 +46,7 @@
              name = 서버가 사용(대부분 id랑 동일하게 지정해줌) -->
         <button type="submit">전송</button>
       </form>
-      <div class="card-container">
-        <div class="card">
-          <div class="card-img"></div>
-          <p class="card-txt">1: 아아아아</p>
-          <!-- textarea : 아주 아주 긴 글
-               p : 일반적인 글
-               span : 아주 특정 일부분에 대한 스타일을 주고 싶을 때 사용 -->
-        </div>
-        <div class="card">
-          <div class="card-img"></div>
-          <p class="card-txt">2: 가가가가</p>
-        </div>
-        <div class="card">
-          <div class="card-img"></div>
-          <p class="card-txt">2: 가가가가</p>
-        </div>
-        <div class="card">
-          <div class="card-img"></div>
-          <p class="card-txt">2: 가가가가</p>
-        </div>
-      </div>
+      <div class="card-container"></div>
     </div>
   </body>
 </html>
