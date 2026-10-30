@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #333;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.title {
+  padding: 10px;
+}
+.card-container {
+  /* background-color: pink; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card-img {
+  padding-top: 80%;
+  background-image: url(../edu/img/김햄찌-02.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.card-txt {
+  padding: 5px;
+  text-align: left;
+}
+.next-btn {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 3px;
+}
